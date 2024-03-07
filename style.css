@@ -27,6 +27,7 @@ header .container{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    transition: all .6s linear;
 }
 .container .navbar{
     padding: 0px 30px;
@@ -65,7 +66,7 @@ header .container{
     transition: all .3s ease;
     width: 0;
 }
-.navbar ul li:hover::after{
+.navbar ul li:hover:not(:last-child)::after{
     width: 100%;
 }
 .navbar ul li .cta-btn{
@@ -82,9 +83,55 @@ header .container{
     display: none;
 }
 .navbar nav .sidebar{
-    display: none;
+    padding-top: 30px;
 }
-
+.navbar nav .sidebar ul{
+    position: absolute;
+    top: 0;
+    left: -450px;
+    transition: all .6s ease;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100vh;
+    background: #fff;
+    width: 250px;
+    padding-top: 40px;
+    transition: all .5s linear;
+}
+.navbar nav .sidebar ul.action{
+    left: 0;
+}
+.sidebar ul li{
+    padding: 15px 25px;
+    width: 100%;
+}
+.sidebar ul li a:hover{
+    color: var(--Ared-shadow);
+}
+.sidebar ul li:hover{
+    width: 0%;
+}
+.sidebar ul .fa-circle-xmark{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 20px;
+    color: var(--Ared-shadow);
+    cursor: pointer;
+}
+.navbar .sidebar ul li .cta-btn{
+    width: 100%;
+    padding: 10px 15px;
+}
+.navbar .sidebar ul li:hover{
+    width: 100%;
+    padding: 10px 20px;
+}
+.sidebar ul li .cta-btn:hover{
+    color: #fff;
+}
 /* moblie display */
 /* 930 */
 @media (max-width: 930px){
@@ -93,7 +140,7 @@ header .container{
     }
     .navbar ul li:hover .cta-btn{
         color: #000;
-        padding: 6px;
+        padding: 6px 20px;
     }
 }
 
@@ -103,9 +150,7 @@ header .container{
     .navbar nav .navbar-links{
         display: none;
     }
-    .navbar nav .sidebar{
-        display: none;
-    }
+
     .logo img{
         width: 120px;
     }
@@ -113,5 +158,12 @@ header .container{
         font-size: 30px;
         cursor: pointer;
         display: block;
+    }
+}
+
+/* 400px */
+@media (max-width: 400px){
+    .navbar nav .sidebar ul{
+        width: 100%;
     }
 }
