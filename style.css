@@ -2,8 +2,9 @@
 font-family: "Poppins", sans-serif;
  */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root{
-    --Aorange: #F08143;
+
     --Ared-shadow: #f23636;
     --Ared-bg: #f55c5c;
 }
@@ -28,7 +29,7 @@ header .container{
     background-repeat: no-repeat;
 }
 .container .navbar{
-    padding: 0px 40px;
+    padding: 0px 30px;
     backdrop-filter: blur(10px);
     background: #ffffffcc;
     box-shadow: 3px 3px 5px (rgba(0,0,0,0.3));
@@ -73,4 +74,44 @@ header .container{
     padding: 10px 25px;
     border-radius: 5px;
     background-color: var(--Ared-bg);
+}
+.navbar ul li:hover .cta-btn{
+    padding: 15px 25px;
+}
+.navbar nav ul .fa-bars{
+    display: none;
+}
+.navbar nav .sidebar{
+    display: none;
+}
+
+/* moblie display */
+/* 930 */
+@media (max-width: 930px){
+    .navbar ul li .cta-btn{
+        padding: 6px;
+    }
+    .navbar ul li:hover .cta-btn{
+        color: #000;
+        padding: 6px;
+    }
+}
+
+
+/* 800 */
+@media (max-width: 870px){
+    .navbar nav .navbar-links{
+        display: none;
+    }
+    .navbar nav .sidebar{
+        display: none;
+    }
+    .logo img{
+        width: 120px;
+    }
+    .navbar nav ul .fa-bars{
+        font-size: 30px;
+        cursor: pointer;
+        display: block;
+    }
 }
