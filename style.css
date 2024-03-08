@@ -1,7 +1,10 @@
 /*  
 font-family: "Poppins", sans-serif;
+font-family: "DM Serif Display", serif;
  */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 
 :root{
 
@@ -23,12 +26,15 @@ body{
 }
 header .container{
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.1)), url(images/hero-bg.jpeg);
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.1)), url(images/hero-bg.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     transition: all .6s linear;
 }
+
+/* ======== navbar =========== */
+
 .container .navbar{
     padding: 0px 30px;
     backdrop-filter: blur(10px);
@@ -82,9 +88,6 @@ header .container{
 .navbar nav ul .fa-bars{
     display: none;
 }
-.navbar nav .sidebar{
-    padding-top: 30px;
-}
 .navbar nav .sidebar ul{
     position: absolute;
     top: 0;
@@ -104,7 +107,7 @@ header .container{
     left: 0;
 }
 .sidebar ul li{
-    padding: 15px 25px;
+    padding: 15px 40px;
     width: 100%;
 }
 .sidebar ul li a:hover{
@@ -132,21 +135,76 @@ header .container{
 .sidebar ul li .cta-btn:hover{
     color: #fff;
 }
-/* moblie display */
-/* 930 */
-@media (max-width: 930px){
-    .navbar ul li .cta-btn{
-        padding: 6px;
-    }
-    .navbar ul li:hover .cta-btn{
-        color: #000;
-        padding: 6px 20px;
-    }
+
+/* ======== hero page =========== */
+
+.container .hero-box{
+    padding-top: 10%;
+    padding-left: 5%;
+    width: 45%;
+}
+.hero-box .call-p{
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(112, 33, 9);
+}
+
+.hero-box .hero-heading{
+    font-size: 34px;
+    font-weight: 900;
+    line-height: 37px;
+    margin: 9px 0;
+    font-family: "DM Serif Display", serif;
+    letter-spacing: .8px;
+}
+.hero-box .hero-desc{
+    text-align: justify;
+    font-size: 14px;
+    color: #111;
+    margin-bottom: 30px;
+}
+.hero-box .btn .cta{
+    color: #fff;
+    box-shadow: 0 2px 0 0 var(--Ared-shadow);
+    padding: 10px 25px;
+    border-radius: 5px;
+    background-color: var(--Ared-bg);
+    font-weight: 600;
+}
+.hero-box .btn .cta:hover{
+    background: transparent;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+    color: #111;
 }
 
 
-/* 800 */
-@media (max-width: 870px){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* moblie display */
+
+
+/* 1024 */
+@media (max-width: 1024px){
+    header .container {
+        background-position: 35%;
+    }
     .navbar nav .navbar-links{
         display: none;
     }
@@ -159,11 +217,283 @@ header .container{
         cursor: pointer;
         display: block;
     }
+    /* ========hero page========*/
+    .container .hero-box{
+        padding-top: 10%;
+        padding-left:10%;
+        width: 50%;
+    }
+    .hero-box .call-p{
+        font-size: 15px;
+    }
+    .hero-box .hero-heading{
+        font-size: 40px;
+        line-height: 40px;
+        margin: 17px 0;
+    }
+    .hero-box .hero-desc{
+        width: 65%;
+        margin-bottom: 60px;
+        font-size: 17x;
+    }
 }
 
-/* 400px */
-@media (max-width: 400px){
+
+/* 770 */
+@media (max-width: 770px){
+    header .container {
+        background-position: 20%;
+    }
+    .navbar nav .navbar-links{
+        display: none;
+    }
+
+    .logo img{
+        width: 120px;
+    }
+    .navbar nav ul .fa-bars{
+        font-size: 30px;
+        cursor: pointer;
+        display: block;
+    }
+    /* ========hero page========*/
+    .container .hero-box{
+        padding-top: 10%;
+        padding-left:10%;
+        width: 60%;
+    }
+    .hero-box .call-p{
+        font-size: 13px;
+    }
+    .hero-box .hero-heading{
+        font-size: 30px;
+        line-height: 30px;
+        margin: 17px 0;
+    }
+    .hero-box .hero-desc{
+        width: 70%;
+        margin-bottom: 60px;
+        font-size: 17x;
+    }
+}
+
+/* 667 */
+@media (max-width: 667px){
+    header .container {
+        background-position: center;
+    }
+    .navbar nav .navbar-links{
+        display: none;
+    }
+
+    .logo img{
+        width: 120px;
+    }
+    .navbar nav ul .fa-bars{
+        font-size: 30px;
+        cursor: pointer;
+        display: block;
+    }
+    /* ========hero page========*/
+    .container .hero-box{
+        padding-top: 5%;
+        padding-left:10%;
+        width: 50%;
+    }
+    .hero-box .call-p{
+        font-size: 13px;
+    }
+    .hero-box .hero-heading{
+        font-size: 25px;
+        line-height: 25px;
+        margin: 14px 0;
+    }
+    .hero-box .hero-desc{
+        width: 70%;
+        margin-bottom: 20px;
+        font-size: 12px;
+    }
+}
+
+
+/* 540px */
+@media (max-width: 540px){
+    header .container {
+        background-position: 17%;
+    }
+    
+}
+
+
+    /* 430px */
+@media (max-width: 430px){
+        header .container {
+            background-position: 35%;
+        }
+        .navbar nav .sidebar ul{
+            width: 100%;
+        }
+        /* ========hero page========*/
+        .container .hero-box{
+            padding-top: 20%;
+            padding-left:10%;
+            width: 90%;
+        }
+        .hero-box .call-p{
+            font-size: 13px;
+        }
+        .hero-box .hero-heading{
+            font-size: 40px;
+            line-height: 40px;
+            margin: 17px 0;
+        }
+        .hero-box .hero-desc{
+            width: 70%;
+            margin-bottom: 60px;
+            font-size: 17x;
+        }
+        
+        }
+
+
+        /* 414px */
+        @media (max-width: 414px){
+            header .container {
+                background-position: 35%;
+            }
+            /* ========hero page========*/
+        .container .hero-box{
+            padding-top: 20%;
+            padding-left:10%;
+            width: 90%;
+        }
+        .hero-box .call-p{
+            font-size: 13px;
+        }
+        .hero-box .hero-heading{
+            font-size: 40px;
+            line-height: 40px;
+            margin: 20px 0;
+        }
+        .hero-box .hero-desc{
+            width: 70%;
+            margin-bottom: 60px;
+            font-size: 17px;
+        }
+        
+    }
+
+
+
+
+/* 390px */
+@media (max-width: 390px){
+        header .container {
+            background-position: 35%;
+        }
+        /* ========hero page========*/
+        .container .hero-box{
+            padding-top: 20%;
+            padding-left:10%;
+            width: 90%;
+        }
+        .hero-box .call-p{
+            font-size: 13px;
+        }
+        .hero-box .hero-heading{
+            font-size: 40px;
+            line-height: 40px;
+            margin: 20px 0;
+        }
+        .hero-box .hero-desc{
+            width: 70%;
+            margin-bottom: 60px;
+            font-size: 15px;
+        }
+    }
+
+
+
+/* 375px */
+@media (max-width: 375px){
+    header .container {
+    background-position: 30%;
+    }
     .navbar nav .sidebar ul{
         width: 100%;
+    }
+    /* ======== hero page =========== */
+    .container .hero-box{
+        padding-top: 20%;
+        padding-left:10%;
+        width: 80%;
+    }
+    .hero-box .call-p{
+        font-size: 13px;
+    }
+    .hero-box .hero-heading{
+        font-size: 35px;
+        line-height: 35px;
+        margin-bottom: 9px;
+    }
+    .hero-box .hero-desc{
+        margin-bottom: 40px;
+        font-size: 13px;
+    }
+}
+
+
+
+
+/* 360px */
+@media (max-width: 360px){
+    header .container {
+        background-position: 30%;
+    }
+/* ======== hero page =========== */
+    .container .hero-box{
+        padding-top: 20%;
+        padding-left:10%;
+        width: 80%;
+    }
+    .hero-box .call-p{
+        font-size: 13px;
+    }
+    .hero-box .hero-heading{
+        font-size: 35px;
+        line-height: 35px;
+        margin-bottom: 9px;
+    }
+    .hero-box .hero-desc{
+        margin-bottom: 40px;
+        font-size: 13px;
+    }
+}
+
+/* 280px */
+@media (max-width: 280px){
+    header .container {
+        background-position: 35%;
+    }
+    .hero-box .btn .cta{
+        padding: 10px;
+    }
+/* ======== hero page =========== */
+    .container .hero-box{
+        padding-top: 20%;
+        padding-left:10%;
+        width: 80%;
+    }
+    .hero-box .call-p{
+        font-size: 13px;
+    }
+    .hero-box .hero-heading{
+        font-size: 35px;
+        line-height: 35px;
+        margin-bottom: 9px;
+    }
+    .hero-box .hero-desc{
+        margin-bottom: 40px;
+        font-size: 13px;
     }
 }
