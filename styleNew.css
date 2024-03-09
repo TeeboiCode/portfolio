@@ -1,5 +1,4 @@
 /* Default styles for mobile displays (360x640 through 414x896) */
-/* These styles will apply to all devices by default */
 
 /*  
 font-family: "Poppins", sans-serif;
@@ -14,7 +13,6 @@ font-family: "DM Serif Display", serif;
      --Ared-shadow: #f23636;
      --Ared-bg: #f55c5c;
 }
-
 /* ==== Reset ==== */
 *{
      margin: 0;
@@ -39,10 +37,11 @@ header{
 /* ==== NavBar ==== */
 .container .navbar{
   background: #fff;
-  padding: 15px 20px;
+  padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
 }
 
 .navbar .logo img{
@@ -59,11 +58,12 @@ header{
 .container .navbar .sidebar{
   position: absolute;
   top: 0;
-  left: -400px;
+  left: -420px;
   height: 100vh;
   background: #fff;
   padding: 40px 30px;
-  width: 100%;
+  width: 0%;
+  box-shadow: 10px 0px 5px rgba(0,0,0,0.1);
 }
 .container .navbar .sidebar.action{
   left: 0;
@@ -111,10 +111,93 @@ header{
   transform: scale(1.09);
 }
 
-
-
-.navbar nav .navbar-links{
+/* ==== NavBar Links===== */
+#menu{
   display: none;
+}
+.navbar nav ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navbar nav li{
+  padding: 0 25px;
+}
+.navbar nav li::after{
+  content: " ";
+  height: 2px;
+  display: block;
+  width: 0%;
+  margin: auto;
+  transition: all .3s ease;
+  background: #000;
+}
+.navbar nav li:hover::after{
+  width: 100%;
+}
+
+.navbar nav li a{
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+/* ==== Hero Section ===== */
+.container .hero-box{
+  padding: 20% 10%;
+  width: 95%;
+}
+
+.hero-box .call-p{
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(168, 49, 12);
+}
+
+.hero-box .hero-heading{
+  font-family: "DM Serif Display", serif;
+  font-size: 30px;
+  margin: 12px 0;
+  line-height: 35px;
+  letter-spacing: 1.2px;
+}
+
+.hero-box .hero-desc{
+  width: 70%;
+  text-align: justify;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000;
+}
+
+.hero-box .btn{
+  margin: 30px 0;
+  width: 90%;
+}
+
+.hero-box .btn a{
+  color: #fff;
+  box-shadow: 0 2px 0 0 var(--Ared-shadow);
+  padding: 15px 30px;
+  border-radius: 5px;
+  background-color: var(--Ared-bg);
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+}
+
+.hero-box .btn a:hover{
+  background: transparent;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+  color: #000;
+}
+
+
+
+/* Default styles for mobile displays (640x360) */
+@media (max-width: 640px) and (max-height: 896px) {
+
 }
 
 
@@ -125,14 +208,25 @@ header{
 
 
 
-/* Tablet displays (601x962 through 1280x800) */
-@media screen and (min-width: 601px) and (max-width: 1280px) and (min-height: 962px) and (max-height: 800px) {
-    /* Your CSS styles for tablet displays here */
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   /* Desktop displays (1366x768 through 1920x1080) */
   @media screen and (min-width: 1366px) and (max-width: 1920px) and (min-height: 768px) and (max-height: 1080px) {
-    /* Your CSS styles for desktop displays here */
+    /* ==== NavBar sidebar ==== */
+    
   }
   
   /* Large desktop displays (2560x1440 through 3840x2160) */
